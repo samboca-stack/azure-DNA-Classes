@@ -12,5 +12,7 @@ namespace Data_Types
         public string LastName { get; set; }
         public DateTime DateofBirth { get; set; }
         public int Age { get; set; }
+        public string Gender { get; set; }
+
     }
 }
