@@ -89,10 +89,55 @@ namespace Data_Types
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\nEnter your Age : ");
                 person.Age = Convert.ToInt32(Console.ReadLine());
-                
+                break;
             }
 
-          //Student < 34 F ; <
+            //Student enter name and marks
+            Console.ForegroundColor = ConsoleColor.White;
+            student lucky = new student();
+
+            var student = lucky;
+    
+            Console.WriteLine("\n Please enter your name below \n");
+            student.name = Console.ReadLine();
+            int count = 0;
+            while (lucky.name != null &  count <5 ) 
+            {
+                Console.WriteLine($"\n {student.name} please enter your test mark below\n");
+                student.marks = Convert.ToInt16(Console.ReadLine());
+
+                if (student.marks < 34 )
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{student.name} : you have failed with {student.marks} %\n");
+
+                }
+
+                else if (student.marks >= 34 & student.marks <= 50)
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine($"{student.name} : you have passed with {student.marks} %\n");
+                }
+
+                else if (student.marks > 50 & student.marks <= 74)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"{student.name} : well done you have passed with {student.marks} %\n");
+                }
+
+                else if ( student.marks >=75 & student.marks <=100)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"{student.name} : congrats excellent passed with {student.marks} %\n");
+                }
+
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\n Please enter your name below \n");
+                student.name = Console.ReadLine();
+                count++;
+
+            }
         }
         
     }
